@@ -16,7 +16,7 @@ import java.util.List;
  * Created by kadu on 5/10/16.
  */
 public class MovieDbApiTest {
-    private static final String API_KEY = "3247a8993ebe4347d1f0622edc5cc8c6";
+    private static final String API_KEY = "";
 
     private static MovieDbApi movieDbApi;
 
