@@ -1,0 +1,3 @@
+include ':app', ':movie-db-api'
+
+project(':movie-db-api').projectDir = new File('movie-db-api')
