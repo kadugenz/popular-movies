@@ -7,6 +7,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.spartatechnology.popularmovies.R;
+import com.spartatechnology.popularmovies.constant.PopularMoviesConstants;
+import com.spartatechnology.popularmovies.fragment.MovieDetailActivityFragment;
 
 /**
  * Created by kadu on 5/11/16.
@@ -17,6 +19,20 @@ public class MovieDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movie_detail);
+
+        Bundle bundle = new Bundle();
+        bundle.putLong(PopularMoviesConstants.EXTRA_MOVIE_INFO_ID, getIntent().getLongExtra(PopularMoviesConstants.EXTRA_MOVIE_INFO_ID, 0l));
+        bundle.putString(PopularMoviesConstants.EXTRA_MOVIE_INFO_IMAGE, getIntent().getStringExtra(PopularMoviesConstants.EXTRA_MOVIE_INFO_IMAGE));
+
+        MovieDetailActivityFragment movieDetailsFragment = new MovieDetailActivityFragment();
+        movieDetailsFragment.setArguments(bundle);
+
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.container, movieDetailsFragment)
+                    .commit();
+        }
+
     }
 
     @Override

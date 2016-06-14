@@ -5,7 +5,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.spartatechnology.moviedbapi.entity.Movie;
 import com.spartatechnology.moviedbapi.entity.MovieDetail;
-import com.spartatechnology.moviedbapi.entity.MovieList;
+import com.spartatechnology.moviedbapi.entity.Movies;
 import com.spartatechnology.moviedbapi.exception.MovieDbException;
 import com.spartatechnology.moviedbapi.service.MovieDbService;
 
@@ -111,9 +111,9 @@ public class MovieDbApi {
     public List<Movie> retrievePopularMovies() throws MovieDbException {
         try {
 
-            final Call<MovieList> call = movieDbService.retrieveMostPopularMovies();
+            final Call<Movies> call = movieDbService.retrieveMostPopularMovies();
 
-            final retrofit2.Response<MovieList> response = call.execute();
+            final retrofit2.Response<Movies> response = call.execute();
             if (response.isSuccessful()) {
                 return response.body().getResults();
             }
@@ -135,9 +135,9 @@ public class MovieDbApi {
     public List<Movie> retrieveTopRatedMovies() throws MovieDbException {
         try {
 
-            final Call<MovieList> call = movieDbService.retrieveTopRatedMovies();
+            final Call<Movies> call = movieDbService.retrieveTopRatedMovies();
 
-            final retrofit2.Response<MovieList> response = call.execute();
+            final retrofit2.Response<Movies> response = call.execute();
             if (response.isSuccessful()) {
                 return response.body().getResults();
             }

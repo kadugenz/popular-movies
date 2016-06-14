@@ -35,6 +35,11 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activity.MainActivity" />
         </activity>
+
+        <provider
+            android:authorities="com.spartatechnology.popularmovies.app"
+            android:name="com.spartatechnology.popularmovies.dao.generated.MovieProvider"
+            android:exported="false" />
     </application>
 
 </manifest>

@@ -13,6 +13,9 @@ public class MovieDetail extends Movie {
     private BigDecimal voteAverage;
     private Long runtime;
 
+    private Reviews reviews;
+    private Trailers trailers;
+
     public String getOverview() {
         return overview;
     }
@@ -51,5 +54,21 @@ public class MovieDetail extends Movie {
 
     public void setRuntime(Long runtime) {
         this.runtime = runtime;
+    }
+
+    public Reviews getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(Reviews reviews) {
+        this.reviews = reviews;
+    }
+
+    public Trailers getTrailers() {
+        return trailers;
+    }
+
+    public void setTrailers(Trailers trailers) {
+        this.trailers = trailers;
     }
 }

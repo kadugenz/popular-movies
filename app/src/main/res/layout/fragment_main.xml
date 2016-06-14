@@ -6,17 +6,10 @@
     tools:context=".fragment.MainActivityFragment"
     tools:showIn="@layout/activity_main">
 
-    <GridView
+    <android.support.v7.widget.RecyclerView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/popular_movies_grid_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:numColumns="2"
         android:gravity="center" />
-
-    <ProgressBar
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:visibility="invisible"/>
 </FrameLayout>

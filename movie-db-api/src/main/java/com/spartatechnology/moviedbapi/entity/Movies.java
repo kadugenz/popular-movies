@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by kadu on 5/10/16.
  */
-public class MovieList {
+public class Movies {
     private List<Movie> results;
 
     public List<Movie> getResults() {
